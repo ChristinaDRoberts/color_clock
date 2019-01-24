@@ -5,8 +5,7 @@
     text-align: center;
     border: 2px solid black;
     font-size: 70px;
-    padding-top: 40px;
-
+    padding-top: 200px;
     display: inline-block;
 
 }
@@ -15,3 +14,8 @@ section{
     text-align: center;
     margin-top:20%;
 }
+
+.time:hover .overlay {
+  opacity: 1;
+}
+

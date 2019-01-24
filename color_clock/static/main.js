@@ -1,5 +1,5 @@
 console.log('hello');
-var d, hour, minute, second, color, currentTime;
+var d, hour, minute, second, color;
 
 function displayTime() {
     d = new Date();
@@ -27,7 +27,8 @@ function displayTime() {
 
     color = "#" + hour + minute + second;
 
-    document.body.style.background = color;
+
+    document.getElementById("timeid").style.background = color;
 
 
 }
