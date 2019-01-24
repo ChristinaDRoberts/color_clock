@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from color_clock.views import Clock
+
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path ("", ),
+   path('admin/', admin.site.urls),
+   path('', Clock.as_view())
 ]

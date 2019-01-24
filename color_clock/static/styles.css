@@ -1,0 +1,17 @@
+.time{
+    height :20%;
+    width: 30%;
+    color: aqua;
+    text-align: center;
+    border: 2px solid black;
+    font-size: 70px;
+    padding-top: 40px;
+
+    display: inline-block;
+
+}
+
+section{
+    text-align: center;
+    margin-top:20%;
+}
