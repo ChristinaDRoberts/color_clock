@@ -40,7 +40,7 @@ SECRET_KEY = ')0(c_(n=u(_jac92z#u2s4&=k5muthi6gqxw^k%e1d4)&ffw40'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['local_host']
+ALLOWED_HOSTS = ['local_host', 'color-clock10.herokuapp.com']
 
 
 # Application definition
