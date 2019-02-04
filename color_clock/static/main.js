@@ -29,7 +29,7 @@ function displayTime() {
     var hexMinute = 0 + minute.toString(16).slice(-2);
     var hexSecond = 0 + second.toString(16).slice(-2);
 
-    var color = (hexHour + hexMinute + hexSecond);
+    color = (hexHour + hexMinute + hexSecond);
 
 
     document.getElementById("timeid").style.background = color;
@@ -37,4 +37,3 @@ function displayTime() {
 
 var timer = setInterval(displayTime, 1000);
 
-var clock = document.getElemetbyID('timeid')
