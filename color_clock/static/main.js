@@ -25,18 +25,16 @@ function displayTime() {
     console.log(percent);
 
 
-    color = "#" + hour + minute + second;
+    var hexHour = 0 + hour.toString(16).slice(-2);
+    var hexMinute = 0 + minute.toString(16).slice(-2);
+    var hexSecond = 0 + second.toString(16).slice(-2);
+
+    var color = (hexHour + hexMinute + hexSecond);
 
 
     document.getElementById("timeid").style.background = color;
-
-
 }
-
-
-
-
 
 var timer = setInterval(displayTime, 1000);
 
-
+var clock = document.getElemetbyID('timeid')
