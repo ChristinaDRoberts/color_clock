@@ -1,6 +1,18 @@
 console.log('hello');
 var d, hour, minute, second, color;
 
+var isHovering = false;
+
+$("#timeid").mouseenter(function(event){
+    isHovering = true;
+    console.log('I\'m hovering');
+});
+
+$("#timeid").mouseleave(function(event){
+    isHovering = false;
+    console.log('I\m not hovering');
+});
+
 function displayTime() {
     d = new Date();
 
@@ -12,10 +24,20 @@ function displayTime() {
     if (minute <= 9) minute = '0' + minute;
     if (second <= 9) second = '0' + second;
 
-    // console.log(second);
+    var hexHour = ('0' + hour.toString(16)).slice(-2);
+    var hexMinute = ('0' + minute.toString(16)).slice(-2);
+    var hexSecond = ('0' + second.toString(16)).slice(-2);
 
-    document.querySelector('.time')
-        .textContent = hour + ":" + minute + ":" + second;
+    if(isHovering){
+        // if true do this
+        document.querySelector('.time').textContent = '#' + hexHour + hexMinute + hexSecond;
+
+    } else {
+        // else do this
+        document.querySelector('.time').textContent = hour + ":" + minute + ":" + second;
+    }
+
+  
 
     x = second;
     per = 1.667;
@@ -25,9 +47,6 @@ function displayTime() {
     // console.log(percent);
 
 
-    var hexHour = ('0' + hour.toString(16)).slice(-2);
-    var hexMinute = ('0' + minute.toString(16)).slice(-2);
-    var hexSecond = ('0' + second.toString(16)).slice(-2);
 
     var color = "#" + hexSecond + hexMinute + hexSecond;
 
@@ -40,4 +59,19 @@ function displayTime() {
 }
 
 var timer = setInterval(displayTime, 1000);
+
+
+var isHovering = false;
+
+$("#timeid").mouseenter(function(event){
+    isHovering = true;
+    console.log('I\'m hovering');
+});
+
+$("#timeid").mouseleave(function(event){
+    isHovering = false;
+    console.log('I\m not hovering');
+});
+
+
 
